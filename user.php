@@ -15,25 +15,25 @@
     <form method="post">
   <div class="mb-3">
     <label>Name</label>
-    <input type="text" class="form-control" name="name" placeholder="Enter your name">
+    <input type="text" class="form-control" name="name" placeholder="Enter your Name" autocomplete="off">
    
   </div>
 
   <div class="mb-3">
     <label>Email</label>
-    <input type="text" class="form-control" name="email" placeholder="Enter your Email">
+    <input type="email" class="form-control" name="email" placeholder="Enter your Email" autocomplete="off">
    
   </div>
 
   <div class="mb-3">
     <label>Phone</label>
-    <input type="text" class="form-control" name="Phone" placeholder="Enter your phone">
+    <input type="text" class="form-control" name="Phone" placeholder="Enter your Phone" autocomplete="off">
    
   </div>
 
   <div class="mb-3">
     <label>Address</label>
-    <input type="text" class="form-control" name="Address" placeholder="Enter your Address">
+    <input type="text" class="form-control" name="Address" placeholder="Enter your Address" autocomplete="off">
    
   </div>
   
