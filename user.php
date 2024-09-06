@@ -1,3 +1,21 @@
+<?php
+include 'connect.php';
+if(isset($_POST['submit'])){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $address = $_POST['address'];
+
+    $sql = "INSERT INTO `userdetails` (`name`, `email`, `phone`, `address`) VALUES ('$name', '$email', '$phone', '$address')";
+    $result = mysqli_query($con, $sql);
+    if($result){
+        echo "Data inserted successfully";
+    }else{
+      die("Data inserting failed: " . mysqli_error($con));
+    }
+}
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -27,17 +45,17 @@
 
   <div class="mb-3">
     <label>Phone</label>
-    <input type="text" class="form-control" name="Phone" placeholder="Enter your Phone" autocomplete="off">
+    <input type="text" class="form-control" name="phone" placeholder="Enter your Phone" autocomplete="off">
    
   </div>
 
   <div class="mb-3">
     <label>Address</label>
-    <input type="text" class="form-control" name="Address" placeholder="Enter your Address" autocomplete="off">
+    <input type="text" class="form-control" name="address" placeholder="Enter your Address" autocomplete="off">
    
   </div>
   
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" name="submit" class="btn btn-primary">Submit</button>
 </form>
     </div>
     
