@@ -9,7 +9,8 @@ if(isset($_POST['submit'])){
     $sql = "INSERT INTO `userdetails` (`name`, `email`, `phone`, `address`) VALUES ('$name', '$email', '$phone', '$address')";
     $result = mysqli_query($con, $sql);
     if($result){
-        echo "Data inserted successfully";
+        // echo "Data inserted successfully";
+        header('location:display.php');
     }else{
       die("Data inserting failed: " . mysqli_error($con));
     }
