@@ -37,7 +37,7 @@ if(mysqli_num_rows($result) > 0){
         <td>".$row['email']."</td>
         <td>".$row['phone']."</td>
         <td>".$row['address']."</td>
-        <td><a href='update.php?id=".$row['ID']."' class='btn btn-primary'>Update</a> <a href='delete.php?id=".$row['ID']."' class='btn btn-danger'>Delete</a></td>
+        <td><a href='update.php?updateid=".$row['ID']."' class='btn btn-primary'>Update</a> <a href='delete.php?deleteid=".$row['ID']."' class='btn btn-danger'>Delete</a></td>
       </tr>";
     }
 }
